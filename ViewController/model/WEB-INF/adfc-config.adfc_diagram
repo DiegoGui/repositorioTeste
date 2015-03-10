@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">login</property>
+      <property
+         name="page">/login.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>login&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">209.29883</property>
+      <property
+         name="x">265.0</property>
+   </View>
+   <TaskFlowCall
+      id="TaskFlowCall3">
+      <property
+         name="taskFlowId">task-create-alimento</property>
+      <property
+         name="activityId">task-create-alimento</property>
+      <property
+         name="documentReference">/WEB-INF/bound-task/create-alimento/task-create-alimento.xml</property>
+      <property
+         name="runAsDialog">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>task-create-alimento&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">211.79883</property>
+      <property
+         name="x">515.3545</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="TaskFlowCall3">
+      <property
+         name="fromOutcome">criarAlimento</property>
+      <property
+         name="sdm:polyPoints">R50,306.0,208.94824,474.3545,211.44824,L50</property>
+   </ControlFlowCase>
+</SDM>

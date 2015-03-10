@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="addVitaminasMinerais.jsf" id="d1">
+        <af:form id="f1">
+            <af:pageTemplate viewId="/resources/templates/template-train-create-alimento.jsf" id="pt1">
+                <f:facet name="body">
+                    <af:panelGroupLayout id="pgl1">
+                        <af:panelBox text="Vitaminas" id="pb1">
+                            <af:panelFormLayout id="pfl2">
+                                <af:icon name="required" id="i1"/>
+                                <af:panelGridLayout id="pgl4">
+                                    <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3">
+                                        <af:gridCell marginStart="5px" width="auto" id="gc6">
+                                            <af:inputComboboxListOfValues label="Vitamina:"
+                                                                          popupTitle="Search and Result Dialog"
+                                                                          id="iclov1" contentStyle="width: 100px;"/>
+                                        </af:gridCell>
+                                        <af:gridCell id="gc5" width="auto">
+                                            <af:button text="Descrição" id="b4"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                </af:panelGridLayout>
+                                <af:panelGridLayout id="pgl5">
+                                    <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
+                                        <af:gridCell marginStart="5px" width="auto" id="gc8">
+                                            <af:inputNumberSpinbox label="Quantidade:" id="ins1" value="1.0"
+                                                                   minimum="0.0" maximum="1000.0"
+                                                                   converter="javax.faces.Double"/>
+                                        </af:gridCell>
+                                        <af:gridCell marginStart="5px" width="auto" id="gc9">
+                                            <af:inputComboboxListOfValues label="Medida:"
+                                                                          popupTitle="Search and Result Dialog"
+                                                                          id="iclov2" contentStyle="width: 30px;"
+                                                                          value="mg"/>
+                                        </af:gridCell>
+                                        <af:gridCell marginStart="5px" width="auto" marginEnd="5px" id="gc10">
+                                            <af:button text="Adicionar" id="b3"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                </af:panelGridLayout>
+                            </af:panelFormLayout>
+                            <af:separator id="s1"/>
+                            <af:panelCollection id="pc1" inlineStyle="width:262px;">
+                                <f:facet name="menus"/>
+                                <f:facet name="toolbar">
+                                    <af:toolbar id="t3">
+                                        <af:button text="Criar Nova" id="b2"/>
+                                    </af:toolbar>
+                                </f:facet>
+                                <f:facet name="statusbar"/>
+                                <af:table var="row" rowBandingInterval="0" id="t2">
+                                    <af:column sortable="false" headerText="Nome" id="c1">
+                                        <af:outputText value="#{row.col1}" id="ot1"/>
+                                    </af:column>
+                                    <af:column sortable="false" headerText="Quantidade" id="c2">
+                                        <af:outputText value="#{row.col2}" id="ot2"/>
+                                    </af:column>
+                                </af:table>
+                            </af:panelCollection>
+                        </af:panelBox>
+                        <af:panelBox text="Minerais" id="pb2">
+                            <af:panelFormLayout id="pfl3">
+                                <af:icon name="required" id="i2"/>
+                                <af:panelGridLayout id="pgl6">
+                                    <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
+                                        <af:gridCell marginStart="5px" width="auto" id="gc7">
+                                            <af:inputComboboxListOfValues label="Mineral:"
+                                                                          popupTitle="Search and Result Dialog"
+                                                                          id="iclov3" contentStyle="width: 100px;"/>
+                                        </af:gridCell>
+                                        <af:gridCell id="gc11" width="auto">
+                                            <af:button text="Descrição" id="b5"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                </af:panelGridLayout>
+                                <af:panelGridLayout id="pgl7">
+                                    <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
+                                        <af:gridCell marginStart="5px" width="auto" id="gc12">
+                                            <af:inputNumberSpinbox label="Quantidade:" id="ins2" value="1.0"
+                                                                   minimum="0.0" maximum="1000.0"
+                                                                   converter="javax.faces.Double"/>
+                                        </af:gridCell>
+                                        <af:gridCell marginStart="5px" width="auto" id="gc13">
+                                            <af:inputComboboxListOfValues label="Medida:"
+                                                                          popupTitle="Search and Result Dialog"
+                                                                          id="iclov4" contentStyle="width: 30px;"
+                                                                          value="mg"/>
+                                        </af:gridCell>
+                                        <af:gridCell marginStart="5px" width="auto" marginEnd="5px" id="gc14">
+                                            <af:button text="Adicionar" id="b6"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                </af:panelGridLayout>
+                            </af:panelFormLayout>
+                            <af:separator id="s2"/>
+                            <af:panelCollection id="pc2" inlineStyle="width:262px;">
+                                <f:facet name="menus"/>
+                                <f:facet name="toolbar">
+                                    <af:toolbar id="t4">
+                                        <af:button text="Criar Novo" id="b7"/>
+                                    </af:toolbar>
+                                </f:facet>
+                                <f:facet name="statusbar"/>
+                                <af:table var="row" rowBandingInterval="0" id="t5">
+                                    <af:column sortable="false" headerText="Nome" id="c3">
+                                        <af:outputText value="#{row.col1}" id="ot3"/>
+                                    </af:column>
+                                    <af:column sortable="false" headerText="Quantidade" id="c4">
+                                        <af:outputText value="#{row.col2}" id="ot4"/>
+                                    </af:column>
+                                </af:table>
+                            </af:panelCollection>
+                        </af:panelBox>
+                    </af:panelGroupLayout>
+                </f:facet>
+                <f:facet name="customTop">
+                    <af:panelGridLayout id="pgl2">
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+                            <af:gridCell marginStart="5px" width="auto" id="gc1">
+                                <af:train value="#{controllerContext.currentViewPort.taskFlowContext.trainModel}"
+                                          id="t1"/>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="auto" marginEnd="5px" id="gc2">
+                                <af:panelFormLayout id="pfl1">
+                                  
+                                    <af:inputText id="it1" value="nome alimento" readOnly="true"
+                                                  clientComponent="true"/>
+                                    <af:inputText id="it2" value="peso do alimento" readOnly="true"
+                                                  clientComponent="true"/>
+                                </af:panelFormLayout>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </f:facet>
+                <f:facet name="customBotton">
+                    <af:panelGridLayout id="pgl3">
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr2">
+                            <af:gridCell marginStart="5px" width="auto" id="gc3">
+                                <af:trainButtonBar value="#{controllerContext.currentViewPort.taskFlowContext.trainModel}"
+                                                   id="tbb1"/>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="auto" marginEnd="5px" id="gc4">
+                                <af:button text="Finalizar" id="b1"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </f:facet>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

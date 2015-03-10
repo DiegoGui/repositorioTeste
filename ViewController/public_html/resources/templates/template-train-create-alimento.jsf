@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core">
+  <af:xmlContent>
+    <afc:component>
+      <afc:description>Template utilizado na task flow de criar alimentos</afc:description>
+      <afc:display-name>template-task-create-alimento</afc:display-name>
+      <afc:facet>
+        <afc:facet-name>body</afc:facet-name>
+      </afc:facet>
+      <afc:facet>
+        <afc:facet-name>customTop</afc:facet-name>
+      </afc:facet>
+      <afc:facet>
+        <afc:facet-name>customBotton</afc:facet-name>
+      </afc:facet>
+    </afc:component>
+  </af:xmlContent>
+  <af:panelGridLayout id="pt_pgl2">
+    <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="pt_gr4">
+      <af:gridCell marginStart="0px" width="400px" marginEnd="0px" id="pt_gc4">
+        <af:decorativeBox id="pt_db1" theme="medium" dimensionsFrom="children">
+          <f:facet name="center">
+            <af:panelStretchLayout id="pt_psl1" inlineStyle="width: 385px;" topHeight="75px">
+              <f:facet name="bottom">
+                <af:decorativeBox id="pt_db4" theme="dark">
+                  <f:facet name="center">
+                    <af:decorativeBox id="pt_db5" theme="medium">
+                      <f:facet name="center">
+                        <af:panelGridLayout id="pt_pgl1">
+                          <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="pt_gr1">
+                            <af:gridCell marginStart="0px" width="auto" id="pt_gc1">
+                              <af:facetRef facetName="customBotton"/>
+                            </af:gridCell>
+                          </af:gridRow>
+                        </af:panelGridLayout>
+                      </f:facet>
+                    </af:decorativeBox>
+                  </f:facet>
+                </af:decorativeBox>
+              </f:facet>
+              <f:facet name="center">
+                <af:facetRef facetName="body"/>
+              </f:facet>
+              <f:facet name="top">
+                <af:decorativeBox id="pt_db2" theme="dark">
+                  <f:facet name="center">
+                    <af:decorativeBox id="pt_db3" theme="medium">
+                      <f:facet name="center">
+                        <af:panelGridLayout id="pt_pgl3">
+                          <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="pt_gr2">
+                            <af:gridCell marginStart="0px" width="auto" id="pt_gc3">
+                              <af:facetRef facetName="customTop"/>
+                            </af:gridCell>
+                          </af:gridRow>
+                        </af:panelGridLayout>
+                      </f:facet>
+                    </af:decorativeBox>
+                  </f:facet>
+                </af:decorativeBox>
+              </f:facet>
+            </af:panelStretchLayout>
+          </f:facet>
+        </af:decorativeBox>
+      </af:gridCell>
+    </af:gridRow>
+  </af:panelGridLayout>
+</af:pageTemplateDef>
+

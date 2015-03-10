@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="task-create-alimento">
+    <default-activity>main</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <managed-bean id="__1">
+      <managed-bean-name>TrainCreateAlimentoBean</managed-bean-name>
+      <managed-bean-class>br.com.tcc.fitbody.view.CreateAlimentoController</managed-bean-class>
+      <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+    <view id="main">
+      <page>/pages/trains/main.jsf</page>
+      <train-stop/>
+    </view>
+    <task-flow-return id="taskFlowReturn1">
+      <outcome>
+        <name>taskFlowReturn1</name>
+      </outcome>
+    </task-flow-return>
+    <view id="addVitaminasMinerais">
+      <page>/pages/trains/addVitaminasMinerais.jsf</page>
+      <train-stop/>
+    </view>
+    <train/>
+    <control-flow-rule id="__2">
+      <from-activity-id>addVitaminasMinerais</from-activity-id>
+      <control-flow-case id="__3">
+        <from-outcome>sair</from-outcome>
+        <to-activity-id>taskFlowReturn1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

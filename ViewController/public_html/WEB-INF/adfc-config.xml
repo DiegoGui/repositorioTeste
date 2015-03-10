@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="login">
+    <page>/login.jsf</page>
+  </view>
+  <task-flow-call id="task-create-alimento">
+    <task-flow-reference>
+      <document>/WEB-INF/bound-task/create-alimento/task-create-alimento.xml</document>
+      <id>task-create-alimento</id>
+    </task-flow-reference>
+    <run-as-dialog>
+      <display-type>
+        <inline-popup/>
+      </display-type>
+    </run-as-dialog>
+  </task-flow-call>
+  <control-flow-rule id="__1">
+    <from-activity-id>login</from-activity-id>
+    <control-flow-case id="__2">
+      <from-outcome>criarAlimento</from-outcome>
+      <to-activity-id>task-create-alimento</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+</adfc-config>

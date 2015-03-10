@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">main</property>
+      <property
+         name="page">/pages/trains/main.jsf</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>main&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="trainStop">true</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">238.94824</property>
+      <property
+         name="x">219.0</property>
+   </View>
+   <TaskFlowReturn
+      id="TaskFlowReturn3">
+      <property
+         name="activityId">taskFlowReturn1</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">227.24707</property>
+      <property
+         name="x">635.0</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View5"
+      to="TaskFlowReturn3">
+      <property
+         name="fromOutcome">sair</property>
+      <property
+         name="sdm:polyPoints">R50,446.0,237.19531,594.0,226.89648,L50</property>
+   </ControlFlowCase>
+   <View
+      id="View5">
+      <property
+         name="activityId">addVitaminasMinerais</property>
+      <property
+         name="page">/pages/trains/addVitaminasMinerais.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>addVitaminasMinerais&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="trainStop">true</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">237.5459</property>
+      <property
+         name="x">405.0</property>
+   </View>
+   <TrainFlow
+      islink="true"
+      id="TrainFlow6"
+      from="View2"
+      to="View5">
+      <property
+         name="sdm:polyPoints">R50,260.0,238.59766,364.0,237.19531,L50</property>
+   </TrainFlow>
+</SDM>
